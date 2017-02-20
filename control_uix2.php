@@ -8,7 +8,11 @@ ini_set('display_errors', 1);
 
 // We include our config file with our set variables in
 // You can either "include" (which asks for it, but it can't find it will carry on) or "require" (which will stop if it can't be found)
+
+//
 require('/usr/share/pi-www/cgi/control_config.php');
+// Does the require need the full path, can it not use relative? Where is the uix2 placed and run from?
+
 include($fn.".php");
 ?>
 
