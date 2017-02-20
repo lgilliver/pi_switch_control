@@ -15,6 +15,9 @@ include($fn.".php");
 <html>
 
 	<head>
+		<!-- Adds bootstrap lines -->
+		<?php echo $bs; ?>
+		
 		<title>Remote Switch Control Panel</title>
 	
 		<script type="text/javascript">
@@ -22,14 +25,21 @@ include($fn.".php");
 			function updateHidden(a)
 			{
 				// Let's make a new id to use in javascript from the one that triggered the event
-				var id = a.id; // a is the object passed int eh arguments
+				var id = a.id; // a is the object passed in the arguments
 				//alert(a.id); // debugger line
 				// we want to replace the "on/off" bit of the current id to be the suffix so we can access the hidden field
 				id = id.replace(a.value,"<?php echo $suffix; ?>");
 				//alert(id); // debugger line
 				// Then we set the value of the hidden input with the value from the button "on/off"
 				document.getElementById(id).value = a.value;
+				updateClasses(a);
 			}
+			
+			function updateClasses(b)
+			{
+				// get our current value
+			}
+			
 			
 		</script>
 		
@@ -75,12 +85,12 @@ include($fn.".php");
 								$id_num = str_pad($x,2,'0',STR_PAD_LEFT);
 								$id_pre = $prefix ."_". $id_num; 
 								?>
-									<button name="<?php echo $id_pre; ?>_on" id="<?php echo $id_pre; ?>_on" value="on" onClick="updateHidden(this)">ON</button>
+									<button class="<?php echo $btn_class; ?> <?php if($switch_array[$id_num] == "on"){ echo "active"; } ?>" name="<?php echo $id_pre; ?>_on" id="<?php echo $id_pre; ?>_on" value="on" onClick="updateHidden(this)">ON</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<button name="<?php echo $id_pre; ?>_off" id="<?php echo $id_pre; ?>_off" value="off" onClick="updateHidden(this)">OFF</button> <!-- "this" is a javascript thing, it essentially is quickhand for saying, the object that was used to trigger the event -->
+									<button class="<?php echo $btn_class; ?> <?php if($switch_array[$id_num] == "off"){ echo "active"; } ?>" name="<?php echo $id_pre; ?>_off" id="<?php echo $id_pre; ?>_off" value="off" onClick="updateHidden(this)">OFF</button> <!-- "this" is a javascript thing, it essentially is quickhand for saying, the object that was used to trigger the event -->
 								</td>
 							</tr>
 							<tr>
