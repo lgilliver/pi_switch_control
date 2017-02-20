@@ -27,5 +27,5 @@ $bs .= '<link href="css/bootstrap.min.css" rel="stylesheet">';
 $bs .= '<script src="js/jQuery1-12-4.js"></script>';
 $bs .= '<script src="js/bootstrap.min.js"></script>';
 
-
+$btn_class = "btn btn-primary"; // Starting class for all buttons
 ?>
