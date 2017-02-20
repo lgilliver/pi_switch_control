@@ -18,4 +18,14 @@ $prefix = "switch";
 // ID suffix for the switches hidden state input
 $suffix = "state";
 
+// Add the bootstrap loader into here as  avariable which is then loaded on every page with a one line call
+$bs = '';
+$bs .= '<meta charset="utf-8">';
+$bs .= '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+$bs .= '<meta name="viewport" content="width=device-width, initial-scale=1">';
+$bs .= '<link href="css/bootstrap.min.css" rel="stylesheet">';
+$bs .= '<script src="js/jQuery1-12-4.js"></script>';
+$bs .= '<script src="js/bootstrap.min.js"></script>';
+
+
 ?>
