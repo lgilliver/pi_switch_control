@@ -37,7 +37,23 @@ include($fn.".php");
 			
 			function updateClasses(b)
 			{
-				// get our current value
+				// Get the current ID and split to it's on and off counerparts
+				id_pre = id.replace(a.value,"<?php echo $suffix; ?>");
+				btn_on = document.getElementById(id_pre+"on");
+				btn_off = document.getElementById(id_pre+"off");
+				switch (b.value) {
+					case "on" :
+						btn_on.className = "<?php echo $btn_class; ?> active";
+						btn_off.className = "<?php echo $btn_class; ?> ";
+						break;
+					case "off" :
+						btn_on.className = "<?php echo $btn_class; ?> ";
+						btn_off.className = "<?php echo $btn_class; ?> active";
+						break;
+				
+				// Get current state
+				
+				// Set state on each counterpart
 			}
 			
 			
