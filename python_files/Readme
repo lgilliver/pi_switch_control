@@ -1,1 +1,23 @@
 These are the python files that handle the switching of sockets
+
+1: switch_control.py
+  Module that wraps the control of the engergenie sockets into one function. 
+  Import this into any file that wants control of the sockets. 
+  Then use function 'switch_socket(socket, switch)' to set each socket
+  Use close() to cleanup the GPIO pins on the pi and exit the program
+  
+  TO DO:
+  - Tidy up code
+  - Find a better way to exit safely
+  
+2: web_file_control.py
+  The module continually checks the file that the webpage writes to
+  and switches the states of the sockets according to the file.
+  
+  TO DO:
+  - find something safe to do if an 'on' or 'off' is not found in the file
+  - add close() to the exception when something isn't right
+    > catch if it is an error with the file or something else
+    > create a queue if the file is unavailable
+  - use logging instead of print()
+  - consider only sending a switch command if there is a change to the switch state
