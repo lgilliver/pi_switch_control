@@ -29,3 +29,4 @@ switch_states.txt.php
 	
 TODO:
 - catch failed attempts writing to switch_states.txt. Add write attempt to queue and re-try until successful
+- Comment in script what to change (filepaths etc.) to get this to work on a Pi.	
