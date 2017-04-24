@@ -21,3 +21,10 @@ These are the python files that handle the switching of sockets
     > create a queue if the file is unavailable
   - use logging instead of print()
   - consider only sending a switch command if there is a change to the switch state
+  - Make this run automatacially on pi boot
+  
+  Future Developments:
+  - Create a timetable for scheduling switches using chrontab
+    > local GUI
+    > web GUI
+  - Create a local GUI for control of sockets
