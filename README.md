@@ -28,5 +28,6 @@ switch_states.txt.php
 	Place this with CGI scripts
 	
 TODO:
-- catch failed attempts writing to switch_states.txt. Add write attempt to queue and re-try until successful
-- Comment in script what to change (filepaths etc.) to get this to work on a Pi.	
+- PHP: Catch failed attempts writing to switch_states.txt. Add write attempt to queue and re-try until successful
+- PHP: Comment in script what to change (filepaths etc.) to get this to work on a Pi. Or create variables to use in
+	the script and set the variables at the beginning (so there is one place to change filepaths.)
