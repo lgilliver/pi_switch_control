@@ -26,3 +26,6 @@ switch_states.txt.php
 	This is the file that PHP will re-read from to get current states in the uix.
 	If you change the above filename in the config, this will auto-update too via PHP
 	Place this with CGI scripts
+	
+TODO:
+- catch failed attempts writing to switch_states.txt. Add write attempt to queue and re-try until successful
